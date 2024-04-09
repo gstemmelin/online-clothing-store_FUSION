@@ -77,6 +77,10 @@ body {
   }
 
   @media (max-width: 610px){
+    body {
+      background-size: 200%;
+    }
+
     header {
         margin-top: 0;
       }
