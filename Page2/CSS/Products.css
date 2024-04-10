@@ -1,6 +1,6 @@
 body {
     background-color: #e7e7e7;
-    background-image: url(/Page2/Media/circuit.jpg);
+    background-image: url(/Page2/Media/Cyberpunk.webp);
     background-size: 100%;
 }
 
@@ -52,6 +52,6 @@ body {
 
 @media (max-width: 610px){
     body {
-      background-size: 200%;
+      background-size: 355%;
     }
   }
