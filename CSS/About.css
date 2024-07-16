@@ -1,0 +1,31 @@
+body {
+    background-image: url(/Media/Background/Cyberpunk_2.jpg);
+    background-size: 100%;
+}
+
+.about__container {
+    display: flex;
+    padding: 2rem 2rem;
+}
+
+.about__content {
+    flex: 1;
+    padding: 2rem;
+    color: #e7e7e7;
+    backdrop-filter: blur(3px);
+    border-radius: 15px;
+    border: 1px solid #474545;
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}  
+
+.about__content:first-child {
+    margin-right: 100px;
+} 
+
+.about__content h1 {
+    text-align: center;
+}
+
+.about__content p {
+    text-align: left;
+}
