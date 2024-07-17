@@ -1,12 +1,11 @@
 body {
   background-color: #f0f0f0;
-  background-size: 150%;
 }
 
 h2 {
-  color: #181818;
-  text-align: center;
-  font-size: 45px;
+    color: #181818;
+    text-align: center;
+    font-size: 45px;
 }
 
 .header__bar {
@@ -90,7 +89,7 @@ h2 {
   .latest__container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 1rem;
+    gap: 2rem;
     margin-top: 5rem;
     margin: 3%;
     padding: 3%;
@@ -123,6 +122,17 @@ h2 {
     transform: scale(1.1);
   }
 
+  .latest__content, h2 {
+    view-timeline-name: --content;
+    view-timeline-axis: block;
+    
+    animation-timeline: --content;
+    animation-name: show;
+
+    animation-range: entry 25% cover 30%;
+    animation-fill-mode: both;
+  }
+
   @keyframes show {
     from {
       opacity: 0;
@@ -133,17 +143,6 @@ h2 {
       opacity: 1;
       scale: 100%;
     }
-  }
-
-  .latest__content, h2 {
-    view-timeline-name: --content;
-    view-timeline-axis: block;
-    
-    animation-timeline: --content;
-    animation-name: show;
-
-    animation-range: entry 25% cover 30%;
-    animation-fill-mode: both;
   }
 
   @media (max-width: 610px){
