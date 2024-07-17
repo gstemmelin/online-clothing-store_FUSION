@@ -1,7 +1,12 @@
 body {
-  background-color: #e7e7e7;
-  background-image: url(/Media/Background/Night_City_Background.jpg);
-  background-size: 100%;
+  background-color: #f0f0f0;
+  background-size: 150%;
+}
+
+h2 {
+  color: #181818;
+  text-align: center;
+  font-size: 45px;
 }
 
 .header__bar {
@@ -13,7 +18,7 @@ body {
 
 .section__container {
     backdrop-filter: blur(2px);
-    border: 1px solid #474545;
+    border: 1px solid #181818;
     max-width: var(--max-width);
     margin: auto;
     padding: 5rem 1rem;
@@ -22,20 +27,21 @@ body {
   .header__content p {
     font-size: 0.8rem;
     font-weight: 600;
-    color: #e7e7e7;
+    color: #181818;
     margin-bottom: 0.5rem;
+    text-decoration: underline;
   }
   
   .header__content h1 {
     font-size: 3rem;
     font-weight: 400;
     margin-bottom: 2rem;
-    color: #e7e7e7;
+    color: #181818;
   }
   
   .header__content .btn {
     background-color: var(--text-dark);
-    color: #e7e7e7;
+    color: #181818;
   }
   
   .header__image {
@@ -43,14 +49,13 @@ body {
   }
   
   .header__image img {
-    max-width: 450px;
+    max-width: 390px;
     position: absolute;
     bottom: -5rem;
     right: 3rem;
   }
 
   .header__image2 {
-    max-width: 300px;
     position: absolute;
     bottom: -0rem;
     left: 16rem;
@@ -75,8 +80,70 @@ body {
     padding: 0.75rem 2rem;
     font-size: 0.8rem;
     text-decoration: none;
-    background-color: #181818;
-    border-radius: 15px;
+  }
+
+  .latest__container img {
+    max-width: 100%;
+    display: block;
+  }
+
+  .latest__container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin-top: 5rem;
+    margin: 3%;
+    padding: 3%;
+  }
+
+  .latest__content {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border: 1px solid #181818;
+    border-radius: 5px;
+    backdrop-filter: blur(2px);
+    transition: all .2s ease-in-out;
+  }
+
+  .latest__content p {
+    text-align: center;
+    color: #181818;
+    font-size: 16px;
+  }
+
+  .content__price {
+    text-align: center;
+    padding: 6%;
+  }
+
+  .latest__content a{
+    text-decoration: none;
+  }
+
+  .latest__content:hover {
+    transform: scale(1.1);
+  }
+
+  @keyframes show {
+    from {
+      opacity: 0;
+      scale: 25%;
+    }
+
+    to {
+      opacity: 1;
+      scale: 100%;
+    }
+  }
+
+  .latest__content, h2 {
+    view-timeline-name: --content;
+    view-timeline-axis: block;
+    
+    animation-timeline: --content;
+    animation-name: show;
+
+    animation-range: entry 25% cover 30%;
+    animation-fill-mode: both;
   }
 
   @media (max-width: 610px){
