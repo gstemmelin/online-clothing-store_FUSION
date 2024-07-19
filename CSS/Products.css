@@ -9,6 +9,12 @@ h2 {
     animation: splash 1s normal forwards ease-in-out;
 }
 
+h3 {
+    text-align: center;
+    color: #181818;
+    font-size: 25px;
+}
+
 .products__container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -29,14 +35,15 @@ h2 {
     text-align: center;
 }
 
-.content__price p{
+.products__content .content__price {
+    color: #747070;
+    font-size: 14px;
     text-align: center;
-    padding: 6%;
+    padding: 4%;
   }
 
 .products__content {
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    border: 1px solid #181818;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
     border-radius: 5px;
     transition: all .2s ease-in-out;
 }
