@@ -46,10 +46,33 @@ h3 {
     box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
     border-radius: 5px;
     transition: all .2s ease-in-out;
+    position: relative;
+}
+
+.top__image {
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    transition: all 0.7s ease;
+}
+
+.top__image:hover {
+    opacity: 1;
 }
 
 .products__content:hover {
     transform: scale(1.1); 
+}
+
+.products__content, h3 {
+    view-timeline-name: --content;
+    view-timeline-axis: block;
+    
+    animation-timeline: --content;
+    animation-name: show;
+
+    animation-range: entry 25% cover 30%;
+    animation-fill-mode: both;
 }
 
 @keyframes splash {
@@ -65,6 +88,18 @@ h3 {
         transform: scale(1, 1);
     }
 }
+
+@keyframes show {
+    from {
+      opacity: 0;
+      scale: 25%;
+    }
+
+    to {
+      opacity: 1;
+      scale: 100%;
+    }
+  }
 
 @media (max-width: 610px) {
     body {
